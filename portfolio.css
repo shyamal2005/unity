@@ -1,0 +1,365 @@
+*{
+    margin:0px;
+    padding:0px;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+body{
+    background-image:url(photo.jpg.jpg);
+    background-size:cover;
+    background-position:center;
+    background-repeat:cacl(0.5s);
+    
+}
+
+
+header{
+    background-color:#0f172a;
+    padding:15px,0;
+}
+
+.navber{
+    width:90%;
+    margin:20px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+.logo{
+    color:#fff;
+    font-size:24px;
+    font-weight:bold;
+}
+
+.nav-links{
+    list-style:none;
+    display:flex;
+    gap:20px;
+}
+
+.nav-links a{
+    color:#fff;
+    text-decoration:none;
+    font-size:16px;
+    transition:color 0.3s;
+}
+
+.nav-links a:hover{
+    color:#3b82f6;
+    transform:scale(1.0);
+}
+
+.hero{
+    display:flex;
+    align-items:center;
+    justify-content:space-around;
+    padding:60px 20px;
+    flex-wrap:wrap;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    color:white;
+}
+
+
+.hero-content{
+    max-width:500px;
+}
+
+.hero-content h1{
+    font-size:25px;
+    font-family:cursive;
+    margin-bottom:15px;
+}
+
+.typed-text { font-weight: bold; font-family:cursive;}
+  .cursor { animation: blink 0.7s infinite; }
+  @keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+  }
+
+.hero-content p{
+    font-size:18px;
+    margin-bottom:20px;
+}
+
+
+
+.hero-btn{
+    display:inline-block;
+    padding:10px 20px;
+    background-color:#3b82f6;
+    color:white;
+    border-radius:6px;
+    text-decoration:none;
+    font-weight:bold;
+    transition:background 0.3s;
+}
+
+.hero-btn:hover{
+    background-color: #2563eb;
+}
+
+.hero-img{
+    width:200px;
+    border-radius:10px;
+    margin-top:20px;
+} 
+
+.about{
+    padding:60px 20px;
+    background-color:#8cbded;
+    text-align:center;
+
+}
+
+.about h2{
+    font-size:28px;
+    color:#0f172a;
+    margin-bottom:20px;
+    text-decoration:underline;
+    text-decoration-color:#2563eb;
+}
+
+.about p{
+    font-size:18px;
+    max-width:700px;
+    margin:auto;
+    color:#444;
+    line-height:1.6;
+}
+
+.skills-section{
+    padding:60px 20px;
+    background:linear-gradient(45deg, rgb(35 115 153), transparent);
+    text-align:center;
+}
+
+.skills-section h2{
+    font-size:28px;
+    color:#0f172a;
+    margin-bottom:30px;
+    text-decoration:underline;
+    text-decoration-color:#2563eb
+}
+
+.skills-container{
+    display:flex;
+    justify-content:center;;
+    flex-wrap:wrap;
+    gap:15px;
+}
+
+.skill{
+    background-color:#3b82f6;
+    color:white;
+    padding:10px 20px;
+    border-radius:8px;
+    font-weight:bold;
+    transition:transform 0.3;
+}
+
+.skill:hover{
+    transform:scale(1.1);
+    background-color:#2563eb;
+}
+
+.projects{
+    background-color:#f9fafb;
+    padding:60px 20px;
+    text-align:center;
+   
+}
+
+.projects h2{
+    font-size:28px;
+    color:#0f172a;
+    margin-bottom:30px;
+    text-decoration:underline;
+    text-decoration-color:#2563eb;
+
+}
+
+.project-container{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:20px;
+}
+
+.project-card{
+    background-color:white;
+    padding:20px;
+    width:280px;
+    border-radius:12px;
+    box-shadow:0 4px 10px rgba(0,0,0,0.1);
+    transition:transform 0.3s;
+}
+
+.project-card:hover{
+    transform:translateY(-5px);
+
+}
+
+.project-card p{
+    color:#555;
+    margin-bottom:15px;
+
+}
+
+.project-card a{
+    text-decoration:none;
+    color:white;
+    background-color:#3b82f6;
+    padding:8px 15px;
+    border-radius:6px;
+    display:inline-block;
+}
+.contact{
+    padding:60px;
+    background:linear-gradient(45deg, black, transparent);
+    text-align:center;
+}
+
+.contact h2{
+    font-size:28px;
+    margin-bottom:20px;
+    color:#0f172a;
+    text-decoration:underline;
+    text-decoration-color:#2563eb;
+
+
+}
+
+.contact-form{
+    max-width:200px;
+    margin:auto;
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+
+}
+
+.contact-form input,
+.contact-form textarea{
+    padding:10px;
+    border:1px solid #ccc;
+    border-radius:8px;
+    font-size:16px;
+    resize:none;
+
+}
+
+.contact-form button{
+    padding:12px;
+    background-color:#3b82f6;
+    color:white;
+    border:none;
+    border-radius:8px;
+    font-weight:bold;
+    cursor:pointer;
+    transition: background 0.3s;
+
+}
+
+.contact-form button:hover{
+    background-color:#2563eb;
+}
+footer{
+    background-color:#0f172a;
+    color:white;
+    text-align:center;
+    padding:20px;
+    font-size:14px;
+
+}
+
+#scrollTopBtn{
+    position:fixed;
+    bottom:30px;
+    right:30px;
+    padding:10px 15px;
+    font-size:20px;
+    background-color:#3b82f6;
+    color:white;
+    border:none;
+    border-radius:50%;
+    cursor:pointer;
+    display:flex;
+    z-index: 999;
+    transition:background 0.3s;
+
+}
+
+#scrollTopBtn:hover{
+    background-color:#2563eb;
+}
+ 
+.menu-toggle{
+    display:none;
+    font-size:28px;
+    color:white;
+    cursor:pointer;
+
+}
+
+@media(max-width:768px){
+    .nav-links{
+        display:none;
+        flex-direction: column;
+        background-color:#0f127a;
+        position:absolute;
+        top:60px;
+        right:20px;
+        padding:20px;
+        border-radius:10px;
+    }
+
+
+.nav-links li{
+    margin:10px 0;
+}
+
+.menu-toggle{
+    display:block;
+}
+.nav-links.show{
+    display:flex;
+}
+} 
+
+.popup-box {
+    display: none;
+    position: absolute;
+    top: 55px; /* navbar height + কিছু gap */
+    right: 120px; /* Home এর অবস্থান অনুযায়ী adjust করো */
+    background-color: rgb(241, 196, 248);
+    color: black;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    width: 250px;
+    height:410px;
+    z-index: 100;
+    overflow:hidden;
+    line-height:1.6em;
+    text-align:center;
+  }
+
+
+.popup-box span {
+   display:inline-block;
+   margin-right:5px;
+   opacity:0;
+   transform:translatey(30px);
+   animation:floatUp 1.5s ease forwards;
+   
+  }
+
+
+  @keyframes floatUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }

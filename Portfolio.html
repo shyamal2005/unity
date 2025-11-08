@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="portfolio.css"/>
+</head>
+<body>
+    <header>
+        
+        <nav class="navber">
+            <div class="logo">Shyamal</div>
+            <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#" id="#">Home</a></li>
+                <li><a href="#" id="homeBtn">About</a></li>
+                <li><a href="#">Skills</a></li>
+                <li><a href="#">Project</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+ 
+
+
+     <div id="popup" class="popup-box">
+</div>
+
+<script>
+  const homeBtn = document.getElementById('homeBtn');
+  const popup = document.getElementById('popup');
+  const text = "I’m a passionate and detail-oriented Web Developer dedicated to crafting beautiful, functional, and user-friendly digital experiences. With a strong foundation in HTML, CSS, JavaScript, and modern frameworks, I transform ideas into interactive and responsive websites that not only look great but also perform flawlessly across all devices.";
+
+  homeBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+
+    if (popup.style.display === 'block') {
+      popup.style.display = 'none';
+      return;
+    }
+
+    popup.innerHTML = "";  // পুরনো কন্টেন্ট মুছে ফেলা
+    
+   
+    const words = text.split(" ");
+
+    words.forEach((word, index) => {
+      const span = document.createElement('span');
+      span.textContent = word + " ";
+      span.style.animationDelay = `${index * 0.4}s`; // word-wise delay
+      popup.appendChild(span);
+    });
+
+    popup.style.display = 'block';
+  });
+
+  // বাইরে ক্লিক করলে popup বন্ধ
+  document.addEventListener('click', (e) => {
+    if (!homeBtn.contains(e.target) && !popup.contains(e.target)) {
+      popup.style.display = 'none';
+    }
+  });
+</script>
+
+    <section class="hero">
+        
+
+        <div class="hero-content">
+            
+            <h1>Hello, I am Shyamal <span class="typed-text"></span><span class="cursor"></span></h1>
+
+<style>
+  .typed-text { font-weight: bold; font-family:cursive}
+  .cursor { animation: blink 0.5s infinite; }
+  @keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+  }
+</style>
+
+<script>
+  const words = ["a Developer.", "a Designer.",];
+  let i = 0, j = 0, current = '', isDeleting = false;
+
+  function type() {
+    let target = document.querySelector('.typed-text');
+    if (i < words.length) {
+      if (!isDeleting && j <= words[i].length) {
+        current = words[i].substring(0, j++);
+        target.innerHTML = current;
+        setTimeout(type, 100);
+      } else if (isDeleting && j >= 0) {
+        current = words[i].substring(0, j--);
+        target.innerHTML = current;
+        setTimeout(type, 60);
+      } else if (!isDeleting) {
+        isDeleting = true;
+        setTimeout(type, 1000);
+      } else {
+        isDeleting = false;
+        i = (i + 1) % words.length;
+        setTimeout(type, 500);
+      }
+    }
+  }
+
+  document.addEventListener("DOMContentLoaded", type);
+</script> 
+
+            <p>A web Developer in the making Web Design and Project.</p>
+            
+        </div>
+        <img src="image.png"  ait="Profile" class="hero-img" />
+        
+    </section>
+    <section class="about">
+        <h2>About Me</h2>
+        
+        <p>Hello! I'm Shyamal Maji, 
+        a beginner web developer from India.
+                I love designing clean,
+            responsive website and I'm 
+            learning HTML, CSS, and 
+            JavaScript.
+                My goal is to become a
+             full-stack developer in the
+             future.
+
+        </p>
+    </section>
+    <section class="skills-section">
+        <h2>My Skills</h2>
+        <div class="skills-container">
+            <div class="skill">HTML</div>
+            <div class="skill">CSS</div>
+            <div class="skill">JavaScript</div>
+            <div class="skill">Git & GitHub</div>
+            <div class="skill">Responsive Design</div>
+        </div>
+    </section>
+    <section class="projects">
+        <h2>My Projects</h2>
+        <div class="project-container">
+            <div class="project Card">
+                <h3>Profile Card</h3>
+        <p>A simple profile card using HTML & CSS.</p>
+        <a href="index.html" target="_blank">View Project</a>
+        </div>
+        <div class="project card">
+            <h3>Login Page</h3>
+            <p>A simple Responsive login UI design using Flexbox. </p>
+            <a href="login.html" target="_blank">View Project</a>
+        </div>
+        <div class="project card">
+            <h3>Blog Layout</h3>
+            <p>A basic blog homepage design template.</p>
+            <a href="blog.html" target="_blank">View Project</a>
+        </div>
+        </div>
+    </section>
+    <section class="contact">
+        <h2>Contact Me</h2>
+        <form class="contact-form">
+            <input type="text" placeholder="Your Name" required/>
+            <input type="email" placeholder="Your Email" required/>
+            <textarea row="10" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+
+        </form>
+    </section>
+</body>
+<script>
+    const scrollBtn=document.getElementById("scrollTopBtn");
+    window.onscroll = () =>{
+        scrollBtn.style.display = (document.body.scrollTop>100  || document.documentElement.scrollTop > 100)
+        ? "block" :"none";
+    };
+    scrollBtn.onclick = () =>{
+        window.scrollTo({top:0,behavior: "smooth"});
+    };
+</script>
+<script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const navLinks= document.getElementById('nav-links');
+    menuToggle.addEventListener('click',() => {
+        navlinks.classList.toggle('show');
+    });
+</script>
+<footer>
+    <p>&copy; 2025 Shyamal Maji.
+        All rights reserved.
+    </p>
+</footer>
+
+<button id="scrollTopBtn"
+tittle="Go to top"></button>
+</html>
