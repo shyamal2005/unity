@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="home.css">
+</head>
+<body>
+    <div id="popup" class="popup-box">
+  <p>Crafting modern and responsive websites that bring your ideas to life.</p>
+</div>
+
+<script>
+  const homeBtn = document.getElementById('homeBtn');
+  const popup = document.getElementById('popup');
+
+  homeBtn.addEventListener('click', () => {
+    popup.style.display = popup.style.display === 'block' ? 'none' : 'block';
+  });
+
+  // Close popup if click outside
+  document.addEventListener('click', (e) => {
+    if (!homeBtn.contains(e.target) && !popup.contains(e.target)) {
+      popup.style.display = 'none';
+    }
+  });
+</script>
+</body>
+</html>
